@@ -2,10 +2,11 @@ import javax.swing.*;
 
 public class MVCViewForm {
     private JPanel MVCPanel;
-    private JTextArea textArea1;
-    private JButton button1;
-    private JTextPane textPane1;
-    private JTextArea textArea2;
+    private JButton EnterButton = new JButton("Enter");
+    private JTextArea Text = new JTextArea(10, 5);
+    private JTextPane User = new JTextPane();
+    private JTextArea Console = new JTextArea(20, 5);
+    private JLabel LoggTitle = new JLabel("Loggbok");
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MVCViewForm");
@@ -13,6 +14,10 @@ public class MVCViewForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public String getLogEntry() {
+        return Text.getText();
     }
 
     private void createUIComponents() {
