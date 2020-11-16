@@ -3,6 +3,7 @@ public class Logg {
     public static void main(String[] args) {
         MVCViewForm theView = new MVCViewForm();
         LoggModel theModel = new LoggModel();
-        LoggController theController = new LoggController();
+        LoggController theController = new LoggController(theView, theModel);
+        theView.setVisible(true);
     }
 }

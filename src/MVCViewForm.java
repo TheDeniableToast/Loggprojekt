@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 public class MVCViewForm {
     private JPanel MVCPanel;
@@ -18,6 +19,11 @@ public class MVCViewForm {
 
     public String getLogEntry() {
         return Text.getText();
+    }
+    public String getUser() { return User.getText(); }
+
+    void addEnterListener(ActionListener listenForEnterButton) {
+        EnterButton.addActionListener(listenForEnterButton);
     }
 
     private void createUIComponents() {
