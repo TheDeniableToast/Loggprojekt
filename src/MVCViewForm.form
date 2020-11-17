@@ -59,7 +59,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="4740b" class="javax.swing.JTextArea" binding="Text">
+              <component id="4740b" class="javax.swing.JTextArea" binding="LogEntry">
                 <constraints/>
                 <properties>
                   <text value=""/>

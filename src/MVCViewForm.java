@@ -4,10 +4,14 @@ import java.awt.event.ActionListener;
 public class MVCViewForm {
     private JPanel MVCPanel;
     private JButton EnterButton = new JButton("Enter");
-    private JTextArea Text = new JTextArea(10, 5);
+    private JTextArea LogEntry = new JTextArea(10, 5);
     private JTextPane User = new JTextPane();
     private JTextArea Console = new JTextArea(20, 5);
     private JLabel LoggTitle = new JLabel("Loggbok");
+
+    public JPanel getMVCPanel() {
+        return MVCPanel;
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MVCViewForm");
@@ -18,9 +22,11 @@ public class MVCViewForm {
     }
 
     public String getLogEntry() {
-        return Text.getText();
+        return LogEntry.getText();
     }
-    public String getUser() { return User.getText(); }
+    public String getUser() {
+        return User.getText();
+    }
 
     void addEnterListener(ActionListener listenForEnterButton) {
         EnterButton.addActionListener(listenForEnterButton);

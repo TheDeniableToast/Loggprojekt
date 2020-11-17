@@ -1,8 +1,12 @@
 public class LoggModel {
 
-    private String LoggEntry;
+    public String LoggEntry;
 
-    public LoggModel(String loggEntry) {
+    public void LoggModel(String loggEntry) {
         LoggEntry = loggEntry;
+    }
+
+    public String getLoggEntry(){
+        return LoggEntry;
     }
 }
